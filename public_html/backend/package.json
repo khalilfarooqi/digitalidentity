@@ -4,7 +4,9 @@
   "description": "Lorem Ipsum",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon --watch server.js"
   },
   "keywords": [
     "MEAN",
@@ -13,9 +15,13 @@
     "Angular",
     "Nodejs"
   ],
-  "author": "Junaid Ahmed",
-  "license": "ISC",
+  "author": "Junaid Ahmed <xunaidahmed@live.com>",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
