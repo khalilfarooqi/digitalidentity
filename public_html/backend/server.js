@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+app.set('view engine','jade');
 
 // set our port
 const port = 3000;
@@ -26,7 +26,7 @@ const port = 3000;
  */
 app.get('/', (req, res) => res.send('Welcome to Tutorialspoint!'));
 app.get('/home', function (req, res) {
-   res.send('This is routing for the application developed using Node and Express...');
+   res.render('index', {title:'Guru99',message:'Welcome'});
 });
 
 
