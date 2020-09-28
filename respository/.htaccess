@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+
+    RewriteEngine On
+
+    RewriteRule ^index.php?/(.*)$ /$1 [R=302,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond $1 !^(index\.php|images|robots\.txt)
+    RewriteRule ^(.*)$ index.php?/$1 [L]
+   # RewriteEngine on
+
+    # Send request via index.php
+   # RewriteCond %{REQUEST_FILENAME} !-f
+   # RewriteCond %{REQUEST_FILENAME} !-d
+   # RewriteRule ^(.*)$ index.php?/$1 [L]
+   # php_value max_input_vars 10000
+
+</IfModule>
